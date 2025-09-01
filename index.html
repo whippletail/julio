@@ -1,54 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My First Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      text-align: center;
-    }
-    h1 {
-      margin-top: 40px;
-    }
-    .gallery {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center; /* Centers horizontally */
-      gap: 20px;              /* Space between pictures */
-    }
-    .gallery img {
-      width: 250px;   /* adjust size */
-      height: auto;   /* keeps proportions */
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    footer {
-      margin-top: 40px;
-      color: #555;
-      font-size: 14px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Julio Enrico L. Remonde - Portfolio</title>
 </head>
 <body>
-  <h1>Julio Remonde</h1>
-  <p>Welcome to my photo gallery!</p>
+  <header>
+<center>
+    <h1>Welcome to My Portfolio</h1>
 
-  <div class="gallery">
-    <img src="julio1.jpg" alt="Photo 1">
-    <img src="julio2.jpg" alt="Photo 2">
-    <img src="julio3.jpg" alt="Photo 3">
-  </div>
+<hr>
+    <p>Hi, I’m Julio Enrico L. Remonde. This is my personal website showcasing my favorite music, videos, and pictures.</p>
+</center
+  </header>
+<center>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="music.html">Music</a> |
+    <a href="videos.html">Videos</a> |
+    <a href="pictures.html">Pictures</a>
+  </nav>
+</center>
+<center>
+  <h2>About Me</h2>
 
-  <footer>
-    © <span id="year"></span> Julio Enrico
-  </footer>
+  <img src="images/me.png" alt="My Photo" width="200">
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <p>I am a person who loves music, movies, and sports. This portfolio is a showcase of the things I enjoy most.</p>
 </body>
+</center>
 </html>
