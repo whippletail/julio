@@ -1,17 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My First Website</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header {
+      text-align: center;
+      padding: 56px 20px 28px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 6vw, 56px);
+      letter-spacing: 0.5px;
+    }
+    .tagline {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(14px, 2.5vw, 18px);
+    }
+    .gallery {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,0.12); }
+    .card img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .caption {
+      padding: 10px 12px 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer { text-align: center; margin-top: 36px; color: var(--muted); font-size: 13px; }
+  </style>
 </head>
 <body>
-  <h1>Audrey Faberes</h1>
-  <p>Welcome to my first website!</p>
+  <div class="wrap">
+    <header>
+      <!-- Replace with your name -->
+      <h1>Audrey Faberes</h1>
+      <p class="tagline">Welcome to my photo gallery ✨</p>
+    </header>
 
-  <h2>My Pictures</h2>
-  <img src="julio1.jpg" alt="Photo 1" width="300">
-  <img src="julio2.jpg" alt="Photo 2" width="300">
-  <img src="julio3.jpg" alt="Photo 3" width="300">
+    <main>
+      <section class="gallery">
+        <!-- TIP: Replace the src values with your own image file paths, e.g. images/pic1.jpg -->
+        <figure class="card">
+          <img src="images/photo1.jpg" alt="Photo 1" />
+          <figcaption class="caption">Photo 1</figcaption>
+        </figure>
 
+        <figure class="card">
+          <img src="images/photo2.jpg" alt="Photo 2" />
+          <figcaption class="caption">Photo 2</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/photo3.jpg" alt="Photo 3" />
+          <figcaption class="caption">Photo 3</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/photo4.jpg" alt="Photo 4" />
+          <figcaption class="caption">Photo 4</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/photo5.jpg" alt="Photo 5" />
+          <figcaption class="caption">Photo 5</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/photo6.jpg" alt="Photo 6" />
+          <figcaption class="caption">Photo 6</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Optional footer text -->
+      © <span id="year"></span> Audrey Faberes
+    </footer>
+  </div>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
